@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<script language="javascript" type="text/javascript">
+        var SecuenciaID=null
+        var imagen=0
+        var duracion=1000
+
+        {imagenes=new CreaArray(4)
+            imagenes[1].src="poumuerto.jpg"
+            imagenes[2].src="pouguapo.jpg"
+            imagenes[3].src="poufino.jpg"
+            imagenes[4].src="poudios.jpg"
+        }
+        function CreaArray(n){
+            this.length=n
+            for(var i=1;i<=n;i++){
+                this[i]=new Image()
+            }
+            return this
+        }
+
+        function MostrarSecuencia(){
+            {
+                document.images["secuencia"].src=imagenes[imagen].src
+                imagen++
+                if(imagen==5)
+                imagen=1
+            }
+            SecuenciaID=setTimeout("MostrarSecuencia()", duracion)
+            SecuenciaEjecutandose=true
+        }
+
+        function IniciarSecuencia(){
+            imagen=1
+            MostrarSecuencia()
+        }
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>INICIO</title>
+    <link href="default.css" rel="stylesheet">
+    <link rel="stylesheet" href="div.css">
+</head>
+<body onload="IniciarSecuencia()">
+    <header>
+        <h1><a href="index.html" class="iman">VIAJES EL TAQUILLOS</a></h1>
+        <form>
+            <label for="bus">Busqueda: </label> <input type="text" id="bus" autocomplete="off">
+            <button>+</button>
+        </form>
+    </header><br><center>
+        <div>
+            <p>La forma para saber calcular el costo del taxi es primero la tarifa de 15 pesos y por cada 1000 mts o 1km cobra 3.6 pesos</p>
+            <img src="poumuerto.jpg" id="imagen" name="secuencia" alt="Taxi" width="300" height="200">
+        </div>
+</body>
+</html>
