@@ -2,22 +2,36 @@
 <html lang="es">
     <script>
         var s = new Audio("shhh.mp3");
+        var elmero = new Audio("elmero.mp3");
         function sonido() {
             s.loop = true;
             s.play();
         }
         function cambiarAvideo() {
             const texto = document.getElementById('bus').value;
+            const contenedor = document.getElementById('contenedor');
+            
             if (texto == "steve") {
               if (s) {
                 s.pause();
             }
-            const contenedor = document.getElementById('contenedor');
+            if(elmero){
+                elmero.pause();
+            }
             contenedor.innerHTML = `
             <video autoplay loop>
             <source src="steve.mp4" type="video/mp4">
             Tu navegador no soporta la reproducción de video.
             </video>`;  
+            }
+
+            else if (texto=="el mero mero"){
+                if (s) {
+                s.pause();
+            }
+            contenedor.innerHTML = '<img src="imagenes/logo.png">';
+                elmero.loop = true;
+                elmero.play();
             }
         }
     </script>
@@ -47,7 +61,7 @@
     </header><br><center>
     <a href="insanidad.html" style="background-color: transparent; box-shadow: none; display: block; width: 500px; margin-top: 4rem;">
         <div id="contenedor" class="contenedor">
-            <img src="imagenes/logo.png" id="imagen">
+            <img src="imagenes/logo.png">
         </div>
     </a>
 </body>
