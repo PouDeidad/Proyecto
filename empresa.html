@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiencia</title>
+    <link rel="stylesheet" href="default2.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 6px 24px rgba(128,0,128,0.10);
+            max-width: 700px;
+            margin: 10px auto;
+            padding: 36px 28px;
+            border: 2px solid #a259e6;
+        }
+        .hola {
+            font-size: 2.8em;
+            letter-spacing: 2px;
+            color: #7c3aed;
+            margin: 0;
+            text-shadow: 1px 2px 16px #e0c3fc;
+        }
+        h2 {
+            font-size: 1.3em;
+            color: #5f259f;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .marquee-box {
+            border-radius: 16px;
+            background: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
+            padding: 12px 0;
+            box-shadow: 0 2px 12px rgba(124,58,237,0.10);
+            margin-bottom: 10px;
+        }
+        marquee {
+            background: transparent;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 6px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="marquee-box">
+            <marquee behavior="alternate" direction="up" height="100px" scrollamount="15">
+                <marquee behavior="alternate">
+                    <h1 class="hola"><b><i>Empresa</i></b></h1>
+                </marquee>
+            </marquee>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="container">
+        <h2>
+            Somos estudiantes de la prepa Cecytea Cd. Satelite Morelos, nuestra empresa ayuda a los usuarios a saber controloar sus viajes por medio del calculo de precios del uber taxi y camion.
+        </h2>
+    </div>
+</body>
+</html>
