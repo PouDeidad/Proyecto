@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <script>
+        
+        function apa(){
+            const info = document.getElementById('info');
+            info.innerHTML = `<h2>Diego Andrés Alonso Guadalajara</h2>
+            <p>Correo: 23401070041482@cecytea.edu.mx</p><br>
+            <h2>Sergio Antonio Rangel Rivera</h2>
+            <p>Correo: 23401070041513@cecytea.edu.mx</p><br>
+            <h2>Leonardo Zuñiga Velazquez</h2>
+            <p>Correo: 23401070041528@cecytea.edu.mx</p><br>`;
+        }
+        function desa(){
+            info.innerHTML = ``;
+        }
+    </script>
+    <script>
+        function sonido() {
+            var a = new Audio("audio/vecinos.mp3");
+            a.loop = true;
+            a.play();
+        }
+    </script>
+<script src="default.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Reportes Mensuales</title>
+    <link href="default.css" rel="stylesheet">
+    <link href="reportes.css" rel="stylesheet">
+    <link rel="icon" href="imagenes/taco.ico">
+</head>
+<body onload="sonido()">
+    <div id="buscador"></div>
+    <script>
+        fetch("default.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("buscador").innerHTML = data;
+        });
+    </script><br><center>
+        <div class="repo"> 
+            <div onmousedown="apa()" onmouseup="desa()" style="position: relative; display: flex; width: 100%; align-items: center; margin-bottom: 10px; cursor: pointer;">
+                <h1 style="font-size: 50px; color: #fff; position: absolute; width: 100%; text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;">
+                    Contactos y mas informacion
+                </h1>
+                <img src="imagenes/click.png" style="position: absolute; right: 0; width: 100px; height: 100px; margin-right: 10px;">
+                <img src="imagenes/fondo.jpg">
+            </div>
+            <hr>
+            <div id="info">
+            </div>
+        </div>
+</body>
+</html>

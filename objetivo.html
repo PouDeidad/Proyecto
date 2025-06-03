@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Objetivos del Proyecto</title>
+  <link rel="stylesheet" href="default.css" />
+  <link rel="icon" href="imagenes/taco.ico">
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #9e03fe;
+      color: white;
+    }
+
+    .contenedor {
+      background-color: #5407d1;
+      border-radius: 20px;
+      padding: 20px;
+      width: 60%;
+      margin-top: 40px;
+    }
+
+    .boton {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #O {
+      margin-top: 20px;
+      background-color: white;
+      color: black;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    }
+  </style>
+
+  <script>
+    function e1() {
+      document.getElementById("O").textContent =
+        "👉 Este objetivo busca calcular el costo de transporte dependiendo de la distancia y el medio elegido.";
+    }
+
+    function e2() {
+      document.getElementById("O").textContent =
+        "👉 Permite comparar precios entre diferentes medios de transporte para elegir el más conveniente.";
+    }
+
+    function e3() {
+      document.getElementById("O").textContent =
+        "👉 El usuario podrá llevar un seguimiento de sus gastos en transporte.";
+    }
+
+    function e4() {
+      document.getElementById("O").textContent =
+        "👉 Diseñar una página fácil de usar, visualmente clara e intuitiva.";
+    }
+
+    function reiniciar() {
+      document.getElementById("O").textContent =
+        "Aquí aparecerá la descripción del objetivo.";
+    }
+  </script>
+<script src="default.js"></script>
+</head>
+<body>
+  <div id="buscador"></div>
+    <script>
+        fetch("default.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("buscador").innerHTML = data;
+        });
+    </script><br><center>
+  <div class="contenedor">
+    <h1>Objetivos del Proyecto</h1>
+
+    <p>Pasa el mouse en cada punto para ver más información:</p>
+
+    <button class="boton" onmousemove="e1()" onmouseout="reiniciar()" id="b1">📍 Calcular costo</button>
+    <button class="boton" onmousemove="e2()" onmouseout="reiniciar()" id="b2">📍 Comparar medios</button>
+    <button class="boton" onmousemove="e3()" onmouseout="reiniciar()" id="b3">📍 Registrar gastos</button>
+    <button class="boton" onmousemove="e4()" onmouseout="reiniciar()" id="b4">📍 Interfaz amigable</button>
+
+    <p id="O">Aquí aparecerá la descripción del objetivo.</p>
+  </div>
+</body>
+</html>

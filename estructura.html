@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="default.css">
+    <style>
+textarea {
+    resize: none;
+    width: 500px;
+    height: 70px;
+    background-color: #5407d1;
+    border: none;
+    color: white;
+    font-size: 14px; 
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    align-content: center;
+}
+table {
+    margin: auto;
+    width: 95vw;
+    max-width: 700px;
+    background-color: #5407d1;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 14px;
+}
+td {
+    text-align: center;
+    padding: 4px;
+    vertical-align: middle;
+}
+img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 5px;
+    background: #fff;
+}
+@media (max-width: 600px) {
+    table, textarea {
+        font-size: 12px;
+    }
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+    </style>
+<script>
+function a1(){
+  document.getElementById("i1").src="imagenes/logo.png";
+  document.getElementById("i1").style.width="70px";
+  document.getElementById("i1").style.height="70px";
+}
+function a2(){
+  document.getElementById("i2").src="imagenes/logo.png";
+  document.getElementById("i2").style.width="70px";
+  document.getElementById("i2").style.height="70px";
+}
+function a3(){
+  document.getElementById("i3").src="imagenes/logo.png";
+  document.getElementById("i3").style.width="70px";
+  document.getElementById("i3").style.height="70px";
+}
+function a4(){
+  document.getElementById("i4").src="imagenes/logo.png";
+  document.getElementById("i4").style.width="70px";
+  document.getElementById("i4").style.height="70px";
+}
+function a5(){
+  document.getElementById("i5").src="imagenes/logo.png";
+  document.getElementById("i5").style.width="70px";
+  document.getElementById("i5").style.height="70px";
+}
+function a6(){
+  document.getElementById("i6").src="imagenes/logo.png";
+  document.getElementById("i6").style.width="70px";
+  document.getElementById("i6").style.height="70px";
+}
+</script>
+<script src="default.js"></script>
+<title>Estructura</title>
+<link rel="icon" href="imagenes/taco.ico">
+</head>
+<body>
+    <div id="buscador"></div>
+    <script>
+        fetch("default.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("buscador").innerHTML = data;
+        });
+    </script><br><center>
+    <h1 
+    style="text-align: center;
+    color: white;
+    padding: 4px;
+    border-radius:10px;
+    background-color: rgb(43, 2, 43);
+    text-shadow: 2px 4px 3px white;
+    font-size: 20px;
+    margin: 10px;">
+    Estructura del proyecto</h1>
+<table>
+<tr>
+<td><textarea rows="3" readonly  onselect="a1()">1. Primero aparece una imagen en el centro , en la parte superior una barra de busqueda para consultar y ala izquierda un boton que lleva a la pagina principal que seria esta misma</textarea></td>
+<td><img id="i1"></td>
+</tr>
+<tr>
+<td><textarea rows="3" readonly  onselect="a2()">2. Cuando interactuas con ella Te manda a una pagina </textarea></td>
+<td><img id="i2"></td>
+</tr>
+<tr>
+<td><textarea rows="3" readonly  onselect="a3()">3. Ya cuando te mando a esa pagina te aparecera un mapa del estado de aguascalientes </textarea></td>    
+<td><img id="i3"></td>
+</tr>
+<tr>
+<td><textarea rows="3" readonly  onselect="a4()">4. Debes de elegir la distancia de un punto A a un punto B y en la parte inferior te apareceran 2 botones uno para reiniciar si te equivocaste y enviar </textarea></td>    
+<td><img id="i4"></td>
+</tr>
+<tr>
+<td><textarea rows="3" readonly  onselect="a5()">5. Al enviar los datos calculara las tarifas conforme sea tal distancia</textarea></td>    
+<td><img id="i5"></td>
+</tr>
+<tr>
+<td><textarea rows="3" readonly  onselect="a6()">6. Esto se guardara en nuestras bases de datos</textarea></td>    
+<td><img id="i6"></td>
+</tr>
+</table>
+</body>
+</html>

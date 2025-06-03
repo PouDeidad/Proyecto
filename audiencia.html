@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="default.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiencia</title>
+    <link rel="stylesheet" href="default.css">
+    <link rel="icon" href="imagenes/taco.ico">
+    <style>
+        .container {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 6px 24px rgba(128,0,128,0.10);
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 36px 28px;
+            border: 2px solid #a259e6;
+        }
+        h2 {
+            font-size: 1.3em;
+            color: #5f259f;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .marquee-box {
+            border-radius: 16px;
+            background: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
+            padding: 12px 0;
+            box-shadow: 0 2px 12px rgba(124,58,237,0.10);
+            margin-bottom: 10px;
+        }
+        marquee {
+            background: transparent;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 6px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="buscador"></div>
+    <script>
+        fetch("default.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("buscador").innerHTML = data;
+        });
+    </script><br><center>
+    <div class="container">
+        <div class="marquee-box">
+            <marquee behavior="alternate" direction="up" height="100px" scrollamount="15">
+                <marquee behavior="alternate">
+                    <h1 style="font-size: 2.8em;
+            letter-spacing: 2px;
+            color: #7c3aed;
+            margin: 0;
+            text-shadow: 1px 2px 16px #e0c3fc;"><b><i>Audiencia</i></b></h1>
+                </marquee>
+            </marquee>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="container" style="margin-top: -50px;">
+        <h2>
+            Principalmente a quien va dirigido este proyecto es para las personas que quieran saber el costo del transporte: <span style="color:#a259e6;font-weight:bold;">uber</span>, <span style="color:#7c3aed;font-weight:bold;">taxi</span>, y <span style="color:#5f259f;font-weight:bold;">camion</span> de un punto A y un punto B y quieran saber su reporte semanal o mensual de sus gastos.
+        </h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<script src="default.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusión</title>
+    <link rel="stylesheet" href="default.css">
+    <link rel="icon" href="imagenes/taco.ico">
+    <style>
+        .titulo {
+            background: linear-gradient(90deg, #ff00ff 60%, #ab39ab 100%);
+            color: #fff;
+            padding: 30px 0 28px 0;
+            text-align: center;
+            box-shadow: 0 4px 24px rgba(26,35,126,0.13);
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+        .titulo::after {
+            content: "";
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #ffeb3b 0%, #ff9800 100%);
+            border-radius: 0 0 16px 16px;
+            opacity: 0.7;
+        }
+        .titulo h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow: 2px 4px 12px rgba(26,35,126,0.18);
+        }
+        main {
+            max-width: 900px;
+            margin: 48px auto 32px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(60,72,88,0.13);
+            padding: 48px 40px;
+            flex: 1 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        h2 {
+            color: #1a237e;
+            margin-top: 0;
+            font-size: 2rem;
+            font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+        p {
+            font-size: 1.18rem;
+            line-height: 1.7;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="buscador"></div>
+    <script>
+        fetch("default.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("buscador").innerHTML = data;
+        });
+    </script><br><center>
+    <div class="titulo">
+        <h1>Conclusión</h1>
+    </div>
+    <main>
+        <h2>¡Tu viaje, tu elección!</h2>
+        <p>
+            El programa desarrollado permite calcular de manera eficiente la distancia entre dos puntos, A y B, utilizando coordenadas proporcionadas por el usuario. A partir de esta distancia, el sistema estima automáticamente el precio de viaje para diferentes medios de transporte: <b style="color:#ff9800;">Uber</b>, <b style="color:#1a237e;">taxi</b> y <b style="color:#3949ab;">camión</b>.
+        </p>
+        <p>
+            Esta herramienta facilita la comparación de costos y ayuda a los usuarios a tomar decisiones informadas sobre la mejor opción de transporte según sus necesidades y presupuesto. Además, su interfaz sencilla y resultados rápidos la convierten en una solución práctica para quienes requieren planificar sus desplazamientos de forma precisa y económica.
+        </p>
+    </main>
+</body>
+</html>

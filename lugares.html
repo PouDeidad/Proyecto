@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<script src="default.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Lugares</title>
+    <link href="default.css" rel="stylesheet">
+    <link rel="icon" href="imagenes/taco.ico">
+</head>
+<body>
+    <div id="buscador"></div>
+    <script>
+        fetch("default.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("buscador").innerHTML = data;
+        });
+    </script><br><center>
+        <img src="imagenes/memes.jpg" id="im" width="275" height="185"><br><br>
+        <input type="button" value="Jardín de San Marcos" onclick="nice()">
+        <input type="button" value="Isla San Marcos" onclick="sahur()">
+        <input type="button" value="Teatro Aguascalientes" onclick="pooh()">
+        <input type="button" value="Exedra" onclick="lol()">
+
+        
+        <audio id="sonidoNice" src="audio/xd.mp3"></audio>
+        <audio id="sonidoTu" src="audio/tu.mp3"></audio>
+        <audio id="sonidoAna" src="audio/aña.mp3"></audio>
+        <audio id="sonidoRollo" src="audio/rollo.mp3"></audio>
+    </center>
+
+    <script>
+        function nice() {
+            document.getElementById("im").src = "imagenes/nices.jpg";
+            let sonido = document.getElementById("sonidoNice");
+            sonido.currentTime = 0;
+            sonido.play();
+        }
+
+        function sahur() {
+            document.getElementById("im").src = "imagenes/tungs.jpg";
+            let sonido = document.getElementById("sonidoTu");
+            sonido.currentTime = 0;
+            sonido.play();
+        }
+
+        function pooh() {
+            document.getElementById("im").src = "imagenes/poos.jpg";
+            let sonido = document.getElementById("sonidoAna");
+            sonido.currentTime = 0;
+            sonido.play();
+        }
+
+        function lol() {
+            document.getElementById("im").src = "imagenes/cafe.jpg";
+            let sonido = document.getElementById("sonidoRollo");
+            sonido.currentTime = 0;
+            sonido.play();
+        }
+    </script>
+</body>
+</html>
